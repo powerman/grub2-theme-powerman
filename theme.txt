@@ -1,0 +1,71 @@
+# GRUB2 gfxmenu Powerman theme.
+# Designed for 1024x768 resolution.
+# Created by Alex Efros <powerman@powerman.name>
+#   Theme images are taken from other themes:
+#       box_white_trans_*       from "starfield"
+#       box_transblack_*        from "starfield"
+#       select_transblue_*      from "proto"
+#       scrollbar_cleanwhite_*  from "winter"
+#   Background image is from unknown source.
+# Version 1.0
+
+# Global Property
+title-text: ""
+title-font: "Unknown Regular 16"
+title-color: "#FFFFFF"
+message-font: "Unknown Regular 16"
+message-color: "#FFFFFF"
+message-bg-color: "#f6f6f6"
+desktop-image: "bg_way_1024x768.jpg"
+desktop-color: "#000000"
+terminal-box: "box_transblack_*.png"
+terminal-font: "Unknown Regular 16"
+
+# Show the boot menu
++ boot_menu {
+		left = 15%
+		width = 70%
+		top = 24%
+		height = 52%
+		item_font = "Arial Regular 20"
+		selected_item_font = "Arial Regular 20"
+		item_color = "#FFFFFF"
+		selected_item_color = "#FFFF00"
+		icon_width = 48
+		icon_height = 48
+		item_height = 48
+		item_padding = 15
+		item_icon_space = 20
+		item_spacing = 5
+		menu_pixmap_style = "box_white_trans_*.png"
+		selected_item_pixmap_style = "select_transblue_*.png"
+		scrollbar = true
+		scrollbar_frame = "scrollbar_cleanwhite_frame_*.png"
+		scrollbar_thumb = "scrollbar_cleanwhite_thumb_*.png"
+		scrollbar_width = 16
+}
+
+# Show a styled horizontal progress bar
++ progress_bar {
+		id = "__timeout__"
+		left = 15%
+		width = 70%
+		top = 78%
+		height = 12
+		show_text = true
+		font = "Unknown Regular 16"
+		text_color = "#FFFFFF"
+		text = "@TIMEOUT_NOTIFICATION_LONG@"
+}
+
+# Show an informational message.
++ hbox {
+		top = 100%-20
+		left = 26%
+		+ label {text = "Enter: " font = "Unknown Regular 16" color = "#FFFF00" align = "left"}
+		+ label {text = "Boot Selection     " font = "Unknown Regular 16" color = "#FFFFFF" align = "left"}
+		+ label {text = "E: " font = "Unknown Regular 16" color = "#FFFF00" align = "left"}
+		+ label {text = "Edit Selection     " font = "Unknown Regular 16" color = "#FFFFFF" align = "left"}
+		+ label {text = "C: " font = "Unknown Regular 16" color = "#FFFF00" align = "left"}
+		+ label {text = "GRUB Commandline" font = "Unknown Regular 16" color = "#FFFFFF" align = "left"}
+}
