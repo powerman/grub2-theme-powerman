@@ -3,7 +3,7 @@ Grub2 gfxmenu theme "Powerman"
 
 Designed for 1024x768 resolution.
 
-Works with Grub-2.00, partially works with Grub-1.99 (submenu not styled).
+Works with Grub-2.02, 2.00, partially works with 1.99 (submenu not styled).
 
 ## Install
 
